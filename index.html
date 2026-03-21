@@ -1105,8 +1105,14 @@ footer {
       </div>
       <div class="contact-form">
         <h4>Request Information</h4>
-        <!-- Replace action with Formspree endpoint or backend: action="https://formspree.io/f/YOUR_ID" method="POST" -->
-        <form action="mailto:info@ttpservices.com" method="POST" enctype="text/plain">
+        <!-- FORMSPREE SETUP: 
+          1. Go to https://formspree.io/ and sign up with Katie's account
+          2. Create a new form for "tpp-services"
+          3. Copy the form ID (looks like: xxxxx)
+          4. Replace "YOUR_FORM_ID" below with that ID
+          https://formspree.io/f/YOUR_FORM_ID
+        -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -1124,6 +1130,10 @@ footer {
           <div class="form-group">
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@company.com" required autocomplete="email">
           </div>
           <div class="form-group">
             <label for="service">Service Needed</label>
