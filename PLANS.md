@@ -29,26 +29,14 @@ Single-page marketing site for Telecom Tower & Power Services (TT&P) — nationw
   4. Update `index.html` line 1108: replace `YOUR_FORM_ID` with actual ID
   5. Commit and push
 
-### GitHub Pages Deployment 🔨
-**Status: IN PROGRESS**
-- CNAME file created pointing to `ttpservices.com` (commit `dd68ee4`)
-- **Katie needs to:**
-  1. Go to repo **Settings → Pages**
-  2. Under "Build and deployment": select **Source: Deploy from a branch**
-  3. Select **Branch: main** / **/(root)**
-  4. Click **Save**
-  5. Pages will auto-build in ~2 min
-  6. Check **Custom domain**: should show `ttpservices.com`
-  
-**Domain setup (Porkbun):**
-- Point `ttpservices.com` nameservers to GitHub Pages:
-  - Go Porkbun → DNS → Add records:
-    - Type: **A**, Name: `@`, Value: `185.199.108.153`
-    - Type: **A**, Name: `@`, Value: `185.199.109.153`
-    - Type: **A**, Name: `@`, Value: `185.199.110.153`
-    - Type: **A**, Name: `@`, Value: `185.199.111.153`
-  - (GitHub will verify DNS in Settings → Pages)
-  - Site live at: `https://ttpservices.com`
+### Deployment to rlv.lol/ttpserv ✅
+**Status: DONE** (commit pending)
+- Files copied to `rlv-lol/ttpserv/` subdirectory (index.html, ttp-work/, logo)
+- CNAME file removed (no custom domain needed)
+- **Deployment:**
+  - rlv-lol project manages the domain
+  - TT&P Services accessible at: `https://rlv.lol/ttpserv`
+  - Contact form submits to Formspree (xlgpkwgj)
 
 ---
 
