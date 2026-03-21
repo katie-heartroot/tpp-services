@@ -15,27 +15,40 @@ Single-page marketing site for Telecom Tower & Power Services (TT&P) — nationw
 
 ## In Progress 🔨
 
-### Gallery Section ([DOING NOW](01-gallery))
-**What:** 5-image gallery of real job site work — organized cable runs, DC power plants, professional installations. Builds instant credibility.
+### Gallery Section ✅
+**Status: DONE** (commit `d08db65`)
 
-**Where:** New section between **About → Contact**, before footer. Uses existing `ttp-work/` images:
-- IMG_0683.jpeg.jpg (5712×4284)
-- IMG_3592.JPG (3264×2448)
-- IMG_3593.JPG (3264×2448)
-- IMG_3597.JPG (3264×2448)
-- IMG_6844.jpeg.jpg (4032×3024)
+### Formspree Contact Form ✅ 
+**Status: DONE** (commit `dd68ee4`)
+- Form configured with email field + name/company/phone/service/message
+- Form action placeholder: `https://formspree.io/f/YOUR_FORM_ID`
+- **Katie needs to:**
+  1. Go to [formspree.io](https://formspree.io)
+  2. Sign up / login
+  3. Create new form → copy Form ID
+  4. Update `index.html` line 1108: replace `YOUR_FORM_ID` with actual ID
+  5. Commit and push
 
-**How:**
-- 2×2 grid on desktop, fallback to 1-col on mobile
-- Each image has a **caption label** (e.g., "DC Power Plant Installation — 48V Rectifier System")
-- Optional: lightbox modal on click (vanilla JS, no deps)
-- Lazy-load images for performance
-
-**Implementation:**
-1. HTML: `<section id="gallery">` with grid + captions
-2. CSS: Responsive grid, image styling, lazy-load ([loading="lazy"](loading="lazy"))
-3. JS: Optional lightbox modal (click image → full-screen overlay)
-4. Git commit: `feat: gallery section with real work photography`
+### GitHub Pages Deployment 🔨
+**Status: IN PROGRESS**
+- CNAME file created pointing to `ttpservices.com` (commit `dd68ee4`)
+- **Katie needs to:**
+  1. Go to repo **Settings → Pages**
+  2. Under "Build and deployment": select **Source: Deploy from a branch**
+  3. Select **Branch: main** / **/(root)**
+  4. Click **Save**
+  5. Pages will auto-build in ~2 min
+  6. Check **Custom domain**: should show `ttpservices.com`
+  
+**Domain setup (Porkbun):**
+- Point `ttpservices.com` nameservers to GitHub Pages:
+  - Go Porkbun → DNS → Add records:
+    - Type: **A**, Name: `@`, Value: `185.199.108.153`
+    - Type: **A**, Name: `@`, Value: `185.199.109.153`
+    - Type: **A**, Name: `@`, Value: `185.199.110.153`
+    - Type: **A**, Name: `@`, Value: `185.199.111.153`
+  - (GitHub will verify DNS in Settings → Pages)
+  - Site live at: `https://ttpservices.com`
 
 ---
 
